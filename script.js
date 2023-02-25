@@ -1,14 +1,16 @@
-const navBtn = document.querySelector('.nav-btn')
-const navClose = document.querySelector('.nav-close')
+const mobileNav = document.querySelector('.mobile-nav')
+const menu = document.querySelector('#menu')
+const menuClose = document.querySelector('#menuClose')
 
-navBtn.addEventListener('click', () => {
-  console.log('navBtn clicked');
-  navBtn.classList.toggle('hidden');
-  navClose.classList.toggle('hidden');
-});
-
-navClose.addEventListener('click', () => {
-  console.log('navClose clicked');
-  navClose.classList.toggle('hidden');
-  navBtn.classList.toggle('hidden');
-});
+menu.addEventListener('click', () => {
+    menu.classList.toggle('hidden')
+    menuClose.classList.toggle('hidden')
+    mobileNav.classList.toggle('hidden')
+    mobileNav.classList.toggle('active')
+})
+menuClose.addEventListener('click', () => {
+    menu.classList.toggle('hidden')
+    menuClose.classList.toggle('hidden')
+    mobileNav.classList.toggle('hidden')
+    mobileNav.classList.toggle('active')
+})
